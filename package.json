@@ -18,5 +18,8 @@
   "devDependencies": {
     "nodemon": "^2.0.6"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "uuid": "^8.3.1"
+  }
 }
