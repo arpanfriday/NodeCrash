@@ -32,6 +32,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: arpanmaity/demo-apps
+        tags: ${GITHUB_REF##*/}_$(git rev-parse --short "$GITHUB_SHA")
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
