@@ -32,7 +32,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: arpanmaity/demo-apps
-        tags: ${{ steps.extract_branch.outputs.branch }}
+        tags: ${GITHUB_REF##*/}
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
